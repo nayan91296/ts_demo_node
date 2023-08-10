@@ -2,8 +2,6 @@ import express from 'express';
 import http from 'http';
 import IP from 'ip';
 import sequelizeInstance from './sequlize';
-const User = require('./model/user');
-const Post = require('./model/post');
 import path from "path";
 const routes = require('./route/route');
 

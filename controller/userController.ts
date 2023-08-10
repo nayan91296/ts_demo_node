@@ -5,17 +5,11 @@ const bcrypt = require('bcryptjs');
 const Validator = require('validatorjs')
 import redisClient from '../redis';
 const config = require('config');
-// const { Sequelize } = require('sequelize');
-const CryptoJS = require("crypto-js");
+
 import sequelizeInstance from '../sequlize';
-import decryptData from '../middleware/decryptData';
-import encryptData from "../middleware/encryptData";
+
 const baseController = require("./baseController");
-// Define encryption and decryption keys and IV keys
-const API_KEY_ENC = '35LQ9RLVKKBOJ9T9OSGIWCWKWS9R3BLY';
-const API_KEY_DEC = 'XG5F9B24OTFE697P2F1G7B1U0ZQUPPGV';
-const API_ENCRYPT_IV_KEY = '7OZNE9SKX6VD14AC';
-const API_DECRYPT_IV_KEY = 'RWMV5ST7FVVMJO99';
+
 const multer = require("multer");
 import { fileStorage } from "../common/utils";
 import { fileFilter } from "../common/utils";

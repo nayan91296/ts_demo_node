@@ -1,12 +1,8 @@
 import crypto from "crypto";
 import {Request, Response} from "express"
 
-const config = require("config")
-
 const API_KEY_ENC = '35LQ9RLVKKBOJ9T9OSGIWCWKWS9R3BLY';
-const API_KEY_DEC = 'XG5F9B24OTFE697P2F1G7B1U0ZQUPPGV';
 const API_ENCRYPT_IV_KEY = '7OZNE9SKX6VD14AC';
-const API_DECRYPT_IV_KEY = 'RWMV5ST7FVVMJO99';
 
 async function encryptedDataResponse(data: any) {        
     const cipher = crypto.createCipheriv("aes-256-cbc", API_KEY_ENC, API_ENCRYPT_IV_KEY);

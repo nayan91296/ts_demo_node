@@ -1,9 +1,7 @@
 import {NextFunction, Request, Response} from "express"
 const crypto = require("crypto");
 
-const API_KEY_ENC = '35LQ9RLVKKBOJ9T9OSGIWCWKWS9R3BLY';
 const API_KEY_DEC = 'XG5F9B24OTFE697P2F1G7B1U0ZQUPPGV';
-const API_ENCRYPT_IV_KEY = '7OZNE9SKX6VD14AC';
 const API_DECRYPT_IV_KEY = 'RWMV5ST7FVVMJO99';
 
 async function DecryptData(req: Request, res: Response, next: NextFunction) {
