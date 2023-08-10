@@ -91,6 +91,7 @@ async function register(req: Request, res: Response) {
   }
 } 
 
+
 async function getProfile(req: Request, res: Response) {
   // console.log('req',(req as any).user?.userId);
   try {
