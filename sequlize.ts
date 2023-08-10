@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
-import { User } from './user';
-import { Post } from './post';
+import { User } from './model/user';
+import { Post } from './model/post';
 
 const sequelizeInstance = new Sequelize({
   host: "127.0.0.1",

@@ -2,7 +2,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 const config = require('config');
-import redisClient from './redis';
+import redisClient from '../redis';
 
 async function authenticateToken(req:any, res:any, next: NextFunction) {
   // console.log('req.headers 111',req.headers);

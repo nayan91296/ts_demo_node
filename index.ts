@@ -2,10 +2,10 @@ import express from 'express';
 import http from 'http';
 import IP from 'ip';
 import sequelizeInstance from './sequlize';
-const User = require('./user');
-const Post = require('./post');
+const User = require('./model/user');
+const Post = require('./model/post');
 import path from "path";
-const routes = require('./route');
+const routes = require('./route/route');
 
 const app = express();
 const bodyParser = require('body-parser')

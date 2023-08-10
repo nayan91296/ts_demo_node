@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-import userController from './userController';
-import middleware from './middleware';
-import decryptData from './decryptData';
+import userController from '../controller/userController';
+import middleware from '../middleware/middleware';
+import decryptData from '../middleware/decryptData';
 
 // Define your route handlers here
 router.get('/', (req:any, res:any) => {

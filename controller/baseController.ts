@@ -1,4 +1,4 @@
-import encryptData from "./encryptData";
+import encryptData from "../middleware/encryptData";
 
 module.exports.success = async function(req:any,res:any,data:any) {
    
