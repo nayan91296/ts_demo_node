@@ -3,16 +3,20 @@ import http from 'http';
 import IP from 'ip';
 import sequelizeInstance from './sequlize';
 import path from "path";
-const routes = require('./route/route');
+import routes from './route/route';
+import SocketHandler from "./controller/SocketHandler";
 
 const app = express();
-const bodyParser = require('body-parser')
+import bodyParser from 'body-parser'
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/image', express.static(path.join(__dirname,'/uploads/images')))
 
 app.use('/user', routes);
+
+import { Server } from "socket.io";
+const io = new Server(3004);
 
 const port = 3000;
 
@@ -37,5 +41,6 @@ function startServer() {
   const server = http.createServer(app);
   server.listen(port, () => {
     console.log(`Server running at http://${IP.address()}:${port}`);
+    io.on("connection", SocketHandler.chatHandler)
   });
 }

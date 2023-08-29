@@ -21,4 +21,6 @@ router.post('/login',userController.login);
 router.post('/image-upload',userController.imageUpload);
 
 // Export the router so that it can be used in the main app file  
-module.exports = router;
+// module.exports = router;
+
+export default router;
